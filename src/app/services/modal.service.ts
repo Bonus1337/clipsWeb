@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ModalService {
+  private visable = false;
+  constructor() {}
 
-  constructor() { }
+  isModalOpen() {
+    return this.visable;
+  }
+  togleModal() {
+    this.visable = !this.visable;
+  }
 }
